@@ -12,11 +12,11 @@ class HomePage extends Component {
             uk-grid="true"
           >
             <div className="uk-card-media-left uk-cover-container uk-width-auto@s vote">
-              <div onClick={() => this.props.upvote(item.id)}><i className="ti-arrow-up"></i></div>
+              <div onClick={() => this.props.upVote(item.id)}><i className="ti-arrow-up"></i></div>
               <div>
                 {item.vote}
               </div>
-              <div onClick={() => this.props.downvote(item.id)}><i className="ti-arrow-down"></i></div>
+              <div onClick={() => this.props.downVote(item.id)}><i className="ti-arrow-down"></i></div>
             </div>
             <div className="uk-width-expand@s">
               <div className="uk-card-body">

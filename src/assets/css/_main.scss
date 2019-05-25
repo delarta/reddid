@@ -17,6 +17,18 @@ font-family: 'Merriweather', serif;
   background: #ebebeb
 }
 
+nav{
+  &.uk-navbar-container{
+    background: #fafafa !important;
+  }
+}
+
+.uk-card{
+  &.uk-card-default{
+    margin-top: 1em;
+  }
+}
+
 .ti-arrow-up{
   font-weight: 700;
   color: #646464;
