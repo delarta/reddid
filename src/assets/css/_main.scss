@@ -1,62 +1,71 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap");
 
 $primary: #1976d2;
 $primary-light: #63a4ff;
 $primary-dark: #004ba0;
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
-h1, h2, h3, h4{
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-body{
-font-family: 'Merriweather', serif;
-  background: #ebebeb
+body {
+  font-family: "Merriweather", serif;
+  background: #ebebeb;
 }
 
-nav{
-  &.uk-navbar-container{
+nav {
+  &.uk-navbar-container {
     background: #fafafa !important;
   }
 }
 
-.uk-card{
-  &.uk-card-default{
+.uk-card {
+  &.uk-card-default {
     margin-top: 1em;
   }
 }
 
-.ti-arrow-up{
-  font-weight: 700;
-  color: #646464;
-  font-size: 1.25rem;
-  
-  &:hover{
-    color: #141414;
-    cursor: pointer;
-    transform: translate(20%, 0)
+.vote {
+  padding: 40px;
+  text-align: center;
+
+  .ti-arrow-up {
+    font-weight: 700;
+    color: #646464;
+    font-size: 1.25rem;
+
+    &:hover {
+      color: #141414;
+      cursor: pointer;
+      transform: translate(20%, 0);
+    }
+  }
+  .ti-arrow-down {
+    font-weight: 700;
+    color: #646464;
+    font-size: 1.25rem;
+
+    &:hover {
+      color: #141414;
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+  }
+
+  .total-vote{
+    font-weight: 700;
+    font-size: 1.25rem;
   }
 }
-.ti-arrow-down{
-  font-weight: 700;
-  color: #646464;
-  font-size: 1.25rem;
 
-  &:hover{
-    color: #141414;
-    cursor: pointer;
-    transform: scale(1.5);
-
-  }
-}
-.vote{
-  padding:40px
-}
-
-.topics{
+.topics {
   margin-top: 1em;
-  margin-bottom:1em
+  margin-bottom: 1em;
 }

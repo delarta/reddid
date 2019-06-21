@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import UIkit from "uikit";
 class AddTopics extends Component {
   constructor(props) {
     super(props);
@@ -12,8 +12,19 @@ class AddTopics extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    this.props.addTopic(this.state.title, this.state.body);
-    this.setState({ title: "", body: "" });
+    if (this.state.title === "" || this.state.body === "") {
+      UIkit.notification({
+        message: "Title or body cannot be empty !",
+        status: "danger"
+      });
+    } else {
+      this.props.addTopic(this.state.title, this.state.body);
+      UIkit.notification({
+        message: "Your topic has been submitted",
+        status: "success"
+      });
+      this.setState({ title: "", body: "" });
+    }
   };
   onchange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -34,8 +45,10 @@ class AddTopics extends Component {
                     value={this.state.title}
                     type="text"
                     className="uk-input"
+                    id="title"
                     name="title"
                     placeholder="Write the title"
+                    maxLength="50"
                   />
                 </div>
 
@@ -47,6 +60,7 @@ class AddTopics extends Component {
                     className="uk-textarea"
                     rows="5"
                     placeholder="Write about something (Max Character 255)"
+                    maxLength="255"
                   />
                 </div>
                 <div>
